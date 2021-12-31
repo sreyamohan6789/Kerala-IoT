@@ -1,0 +1,17 @@
+.pagehead{
+    text-align: center;
+    background-color: darkturquoise;
+
+}
+.project{
+    color: aliceblue;
+    
+}
+.content{
+    padding-bottom: 2rem;
+    color: black;
+}
+.content h1 , h2 , h3{
+    color: darkcyan;
+    padding-bottom: 1rem;
+}

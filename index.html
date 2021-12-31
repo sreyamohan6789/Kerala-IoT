@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala IoT Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--heading section-->
+    <header class="pagehead">
+        <h1 class="project">Kerala IoT Challenge</h1>
+        <a href="#">Checkout my github</a>
+    </header>
+
+    <!--contents add-->
+    <div class="content">
+        <h2>Kerala IoT Challenge</h2>
+        <p>Foxlab Makerspace in association with GTech - Group of Technology Companies in Kerala is launching our
+            prestigious program “Kerala IoT Challenge 2021”, with a vision to mould 100 IoT experts in Kerala, hosting
+            on the MuLearn platform. Kerala IoT Challenge is a program designed in 4 levels followed by a hackathon to
+            identify and train quality industry leaders in the IoT domain, while any novice learner can start with layer
+            1 and others can enter laterally to the desired layer after an evaluation.</p>
+
+        <h2>About Me</h2>
+        <p>My name is Sreya Mohan.I am a second year Integrated MSc Programme in Basic Sciences-Chemistry student from
+            St. Xavier's College for Women, Aluva</p>
+
+    </div>
+    <!--contents add-->
+    <div class="content">
+        <h2>Experiment 1 : Hello World LED Blinking</h2>
+        <h2>Components Required</h2>
+        <ul>
+            <li>Arduino Uno Board</li>
+            <li>USB Cable</li>
+            <li>(Any Color) x 1 Nos</li>
+            <li>220 OHM Resistor X 1 Nos</li>
+            <li>Breadboard</li>
+            <li>Jumper Wires (Male to Male ) X 2 Nos</li>
+        </ul>
+    </div>
+
+    <!--img add-->
+    <div class="content">
+        <h2>Circuit Diagram</h2>
+        <img src="circuit1.png" alt="circuit1">
+    </div>
+    
+    <!--contents add-->
+    <div class="content">
+        <h2>Code</h2>
+        <p>ledPin = 10; // define digital pin 10.
+        void setup()
+        {
+        pinMode(ledPin, OUTPUT);// define pin with LED connected as output.
+        }
+        void loop()
+        {
+        digitalWrite(ledPin, HIGH); // set the LED on.
+        delay(1000); // wait for a second.
+        digitalWrite(ledPin, LOW); // set the LED off.
+        delay(1000); // wait for a second
+        }
+    </p>
+    </div>
+
+    <!--video add-->
+    <div class="content">
+        <h2>Output</h2>
+        <iframe width="420" height="245" src="exp1.mp4">
+        </iframe>
+
+    </div>
+
+    <!--contents add-->
+    <div class="content">
+        <h2>Experiment 2 : Traffic Light</h2>
+        <h2>Components Required</h2>
+        <ul>
+            <li>Arduino Uno Board*1</li>
+            <li>USB Cable*1</li>
+            <li>Red M5 LED*1</li>
+            <li>Yellow MS LED*1</li>
+            <li>Green M S LED*1</li>
+            <li>220Ω RESISTOR*3</li>
+            <li>Breadboard*1</li>
+            <li>Breadboard jumper wires</li>
+                
+                </div>
+            
+                <!--img add-->
+                <div class="content">
+                    <h2>Circuit Diagram</h2>
+                    <img src="circuit2.png" alt="circuit2">
+                </div>
+                
+                <!--contents add-->
+                <div class="content">
+                    <h2>Code</h2>
+                    <p>int redled =10; // initialize digital pin 10.
+                        int yellowled =7; // initialize digital pin 7.
+                        int greenled =4; // initialize digital pin 4.
+                        void setup()
+                        {
+                        pinMode(redled, OUTPUT);// set the pin with red LED as “output”
+                        pinMode(yellowled, OUTPUT); // set the pin with yellow LED as “output”
+                        pinMode(greenled, OUTPUT); // set the pin with green LED as “output”
+                        }
+                        void loop()
+                        {
+                        digitalWrite(greenled, HIGH);//// turn on green LED
+                        delay(5000);// wait 5 seconds
+                        
+                        digitalWrite(greenled, LOW); // turn off green LED
+                        for(int i=0;i<3;i++)// blinks for 3 times
+                        {
+                        delay(500);// wait 0.5 second
+                        digitalWrite(yellowled, HIGH);// turn on yellow LED
+                        delay(500);// wait 0.5 second
+                        digitalWrite(yellowled, LOW);// turn off yellow LED
+                        } 
+                        delay(500);// wait 0.5 second
+                        digitalWrite(redled, HIGH);// turn on red LED
+                        delay(5000);// wait 5 seconds
+                        digitalWrite(redled, LOW);// turn off red LED
+                        }
+                    </p>
+                </div>
+            
+                <!--video add-->
+                <div class="content">
+                    <h2>Output</h2>
+                    <iframe width="420" height="245" src="exp2.mp4">
+                    </iframe>
+            
+                </div>
+
+
+            <!--contents add-->
+    <div class="content">
+        <h2>Experiment 3 : LED Chasing Effect</h2>
+        <h2>Components Required</h2>
+        <ul>
+            <li>LED*6</li>
+            <li>Arduino Uno Board*1</li>
+            <li>220Ω RESISTOR*6</li>
+            <li>Breadboard*1</li>
+            <li>USB Cable*1</li>
+            <li>Breadboard wires*1</li>
+                
+    </div>
+            
+            <!--img add-->
+                <div class="content">
+                    <h2>Circuit Diagram</h2>
+                    <img src="circuit3.png" alt="circuit3">
+                </div>
+                
+                <!--contents add-->
+                <div class="content">
+                    <h2>Code</h2>
+                    <p>int BASE = 2 ;  // the I/O pin for the first LED
+                        int NUM = 6;   // number of LEDs
+                        void setup()
+                        {
+                           for (int i = BASE; i < BASE + NUM; i ++) 
+                           {
+                             pinMode(i, OUTPUT);   // set I/O pins as output
+                           }
+                        }
+                        void loop()
+                        {
+                           for (int i = BASE; i < BASE + NUM; i ++) 
+                           {
+                             digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.
+                             delay(200);        // delay
+                           }
+                           for (int i = BASE; i < BASE + NUM; i ++) 
+                           {
+                             digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one
+                             delay(200);        // delay
+                           }  
+                        }
+                    </p>
+                </div>
+            
+                <!--video add-->
+                <div class="content">
+                    <h2>Output</h2>
+                    <iframe width="420" height="245" src="exp3.mp4">
+                    </iframe>
+            
+                </div>
+           
+       
+  
+           
+       
+  
+
+
+
+
+</body>
+
+</html>
+
